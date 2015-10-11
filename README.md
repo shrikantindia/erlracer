@@ -3,30 +3,56 @@ Erlang challeges for great good, with leaderboards suited for hackathons
 
 # 1. Pick a problem
 
-    git clone https://github.com/bosky101/erlracer
+Fork or clone the repo
+
+    git clone https://github.com/bosky101/erlracer 
     cd erlracer/prob1
 
 # 2. Read the challenge
 
    cat src/prob1.erl
 
-# 3. Complete the solution
+### Complete the solution
 
-   solution()-> ...
+    -module(prob1).
+    -export([start/0, expected/0]).
+      
+    start()->
+        Input = <<"The quick brown fox jumps over the lazy dog">>,
+        
+        ExpectedOutput = solve(Input),
+        
+        ExpectedOutput.
+    
+    solve(_Input)->
+        io:format("~n TODO: prob1:solve/1",[]),
+        [<<"The">>,<<"quick">>,<<"brown">>,<<"fox">>,<<"jumps">>,<<"over">>,<<"the">>,<<"lazy">>,<<"dog">>].
+     
+    expected()->
+        [<<"brown">>,<<"dog">>,<<"fox">>,<<"jumps">>,<<"lazy">>,<<"over">>,<<"quick">>,<<"the">>].
+    
 
-# 4. Test it
+# 3. Test it
 
-   make compile eunit
+(requires rebar)
 
-# 5. Compete!
+    make compile eunit
 
-   # edit your nickname 
-   # vi prob1/test/prob1_test.erl %% edit line 10
-   -define(USER, "pick_a_username").
+# 4. Compete!
 
-   # checks the time taken by your program in microseconds, and submits
-   #  to a leaderboard
-   make race
+   
+    # edit your nickname 
+    # vi prob1/test/prob1_test.erl %% edit line 10
+    -define(USER, "pick_a_username").
+    -define(EVENT, "practice"). %% or change this. eg erlhyd15oct11
+
+### Submit your solution
+
+checks the time taken by your program in microseconds, and submits to a leaderboard, along with the problem name, your nickname, the event, and your time
+
+    
+    make race
+    
 
 # Leaderboard
 
@@ -38,12 +64,6 @@ Erlang challeges for great good, with leaderboards suited for hackathons
     ********************************************/
     User            Event           Time
     --------------  --------------  ------
-    bosky101        practice        101.00
+    bosky101        practice        101000000.00
     
-
-
-# Compete
-
-    cd prob1 #or choose a different folder
-    make compile race
 
