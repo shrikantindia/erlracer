@@ -1,5 +1,6 @@
 Erlang challeges for great good, with leaderboards suited for hackathons
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bosky101/erlracer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 # 1. Pick a problem
 
