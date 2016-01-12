@@ -2,7 +2,7 @@
 
 -include_lib("eunit/include/eunit.hrl").
 
--define(USER, "pick_a_nickname").
+-define(USER, "shri").
 -define(EVENT, "practice"). %% or choose one based on the meetup "erlhyd15oct11"
 
 race_test_() ->
